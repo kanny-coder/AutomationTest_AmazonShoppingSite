@@ -92,7 +92,6 @@ public class Test_AmazonOrderPlacing extends TestBase {
 	
 	@Test(priority = 3)
 	public void filteringSearchResults() throws Exception{
-		String productToSearch = "OnePlus Nord CE 3 Lite 5G";
 		String minPrice = "10000";
 		String maxPrice = "25000";
 		
@@ -133,7 +132,6 @@ public class Test_AmazonOrderPlacing extends TestBase {
 	
 	@Test(priority = 5)
 	public void proceedingToCheckout() throws Exception{
-		
 		report.testCase("Proceeding to checkout", "Proceeding to the checkout page and verify that the correct product and options are displayed in the shopping cart.");
 		
 		Thread.sleep(2000);
@@ -169,7 +167,6 @@ public class Test_AmazonOrderPlacing extends TestBase {
 	
 	@AfterTest
 	public void tearDown() throws InterruptedException {
-		Thread.sleep(5000);
 		driver.close();
 		driver.quit();
 	}
