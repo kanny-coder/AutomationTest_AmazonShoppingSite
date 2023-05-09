@@ -28,7 +28,7 @@ The project is structured as follows:
   - `config`: contains `config.properties` file containing configuration details.
   - `engine`: contains `KeyWord.java` file containing all the necessary methods to perform actions in the test.
   - `pages`: contains the page files that correspond to the pages of the Amazon shopping site being tested.
-  - `utlis`: contains the various utility files such as (`AmazonObjRepo.java`, `Reporting.java`, `StaticVals.java`).
+  - `utils`: contains the various utility files such as (`AmazonObjRepo.java`, `Reporting.java`, `StaticVals.java`).
 - `src/main/resources`: contains the configuration files such as `config.properties`
 - `src/test/java/testScripts`: contains the test classes that correspond to the test cases being executed
 - `testExtentReport` folder contains the extent report generated after running the Automation Script.
