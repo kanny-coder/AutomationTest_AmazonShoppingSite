@@ -3,9 +3,6 @@ package pages;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import org.testng.Assert;
-
 import base.TestBase;
 import engine.KeyWord;
 import utils.AmazonObjRepo;
@@ -20,6 +17,9 @@ public class SearchResultPage extends TestBase {
 		keyWord = new KeyWord();
 	}
 
+	/*
+	 * This Method verifies the search results
+	 */
 	public void verifySearchResults(String productToSearch) throws Exception {
 		report.info("Verifying Search Results");
 		System.out.println("Verifying Search result Info Bar on Top");
@@ -29,6 +29,9 @@ public class SearchResultPage extends TestBase {
 				"//span[@data-component-type='s-result-info-bar']//span[contains(text(),'" + productToSearch + "')]");
 	}
 
+	/*
+	 * This Method applies the Price range filter
+	 */
 	public void filterPriceRange(String minPrice, String maxPrice) throws Exception {
 		report.info("Filtering by Price Range");
 		keyWord.scrollToView("id", AmazonObjRepo.priceFilterColumn);
@@ -40,6 +43,9 @@ public class SearchResultPage extends TestBase {
 		keyWord.click("xpath", AmazonObjRepo.priceFilterSubmitBtn);
 	}
 
+	/*
+	 * This Method Validates the filtered results after applying Price range Filter
+	 */
 	public void validatePriceFilterResult(String minPrice, String maxPrice) {
 		report.info("Validating Price Filter Results");
 		List<String> prices = keyWord.getAllTextVals("xpath", AmazonObjRepo.priceTagsSearchResults);
@@ -78,6 +84,9 @@ public class SearchResultPage extends TestBase {
 		}
 	}
 
+	/*
+	 * This Method selects the specified product from Search Results
+	 */
 	public ProductPage selectProductFromSearchResults(String productToSearch) throws Exception {
 		report.info("Selecting a Product");
 		System.out.println("Selecting a Product");
@@ -88,6 +97,9 @@ public class SearchResultPage extends TestBase {
 		return new ProductPage();
 	}
 
+	/*
+	 * This Method gets the Current Page details
+	 */
 	public void getPageDetails() {
 		System.out.println("Current URL is :" + keyWord.getCurrentURL());
 	}

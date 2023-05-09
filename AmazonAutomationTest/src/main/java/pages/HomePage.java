@@ -1,7 +1,6 @@
 package pages;
 
 import org.testng.Assert;
-
 import base.TestBase;
 import engine.KeyWord;
 import utils.AmazonObjRepo;
@@ -17,10 +16,16 @@ public class HomePage extends TestBase {
 		navigateToHomePage();
 	}
 	
+	/*
+	 * This Method returns the WebPage Title
+	 */
 	public String getHomePageTitle() {
 		return keyWord.getPageTitle();
 	}
 	
+	/*
+	 * This Method Navigates to Amazon.in's Home page
+	 */
 	public void navigateToHomePage() {
 		String URL = prop.getProperty("url");
 		keyWord.navigateToURL(URL);
@@ -28,10 +33,16 @@ public class HomePage extends TestBase {
 		System.out.println("Current URL is : "+keyWord.getCurrentURL());
 	}
 	
+	/*
+	 * This Method returns "True" or "False" boolean value if Amazon's Home page logo is visible.
+	 */
 	public boolean getHomePageAmazonLogo() throws Exception {
 		return keyWord.getElement("id", AmazonObjRepo.homePageAmazonLogo).isDisplayed();
 	}
 	
+	/*
+	 * This Method Navigates to Amazon.in's Sign In page
+	 */
 	public SignInPage goToSignInPage() throws Exception{
 		report.info("Navigating to Amazon Sign In page");
 		keyWord.mouseHover("id", AmazonObjRepo.accountListDropDown);
@@ -39,12 +50,18 @@ public class HomePage extends TestBase {
 		return new SignInPage();
 	}
 
+	/*
+	 * This Method verifies and Validates HomePage of Amazon.in
+	 */
 	public void verifyAndValidateHomePage(String expHomePageTitle) throws Exception {
 		report.info("Verifying Amazon Page Title and Logo");
 		Assert.assertEquals(expHomePageTitle, getHomePageTitle());
 		Assert.assertTrue(getHomePageAmazonLogo());
 	}
 
+	/*
+	 * This Method verified the Username of user logged in.
+	 */
 	public void verfiyLoggedInUser(String userName) throws Exception {
 		report.info("Verifying Logged In User");
 		if(keyWord.getElementText("xpath", AmazonObjRepo.loggedInUser).contains(userName)) {
@@ -56,6 +73,9 @@ public class HomePage extends TestBase {
 		}
 	}
 	
+	/*
+	 * This Method searches for the specified Product
+	 */
 	public SearchResultPage searchForProduct(String productName) throws Exception {
 		report.info("Search for a product");
 		keyWord.verifyElementExists("id", AmazonObjRepo.productSearchBar);
@@ -64,6 +84,9 @@ public class HomePage extends TestBase {
 		return new SearchResultPage();
 	}
 	
+	/*
+	 * This Method delete the items of cart if it is not empty
+	 */
 	public void deleteCartIfNotEmpty() throws Exception {
 		int cartCount = Integer.parseInt(keyWord.getElementText("xpath", AmazonObjRepo.getCartCount));	
 		if(cartCount>0) {
@@ -71,6 +94,9 @@ public class HomePage extends TestBase {
 		}
 	}
 
+	/*
+	 * This Method clears the cart
+	 */
 	public void clearCart() throws Exception {
 		report.info("Clearing Shopping Cart");
 		keyWord.click("xpath", AmazonObjRepo.cartIcon);
@@ -89,11 +115,17 @@ public class HomePage extends TestBase {
 		
 	}
 
+	/*
+	 * This Method displays the current page details
+	 */
 	public void getPageDetails() {
 		report.info("Current URL is :" + keyWord.getCurrentURL());
 		System.out.println("Current URL is :" + keyWord.getCurrentURL());
 	}
 
+	/*
+	 * This Method deletes the old addresses (If Available)
+	 */
 	public void deleteOldAddressIfAvailable() throws Exception {
 		keyWord.mouseHover("id", AmazonObjRepo.accountListDropDown);
 		keyWord.click("xpath", AmazonObjRepo.yourAccount);

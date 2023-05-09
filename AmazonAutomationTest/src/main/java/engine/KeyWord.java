@@ -21,6 +21,9 @@ public class KeyWord extends TestBase {
 	static Actions action = null;
 	static Reporting report = new Reporting();
 
+	/*
+	 * This method will navigate to the specified URL
+	 */
 	public void navigateToURL(String URL) {
 		try {
 			driver.navigate().to(URL);
@@ -34,6 +37,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This method will return the "By" locator
+	 */
 	public By locatorValue(String locatorType, String locatorPath) {
 		By by;
 
@@ -63,6 +69,9 @@ public class KeyWord extends TestBase {
 		return by;
 	}
 
+	/*
+	 * This method will click on the WebElement
+	 */
 	public void click(String locatorType, String locatorPath) throws Exception {
 		By locator;
 		locator = locatorValue(locatorType, locatorPath);
@@ -80,6 +89,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 	
+	/*
+	 * This method verifies if the particular WebElement exists on the Web page or not
+	 */
 	public void verifyElementExists(String locatorType, String loctorPath) throws Exception {
 		By locator;
 		locator = locatorValue(locatorType, loctorPath);
@@ -101,6 +113,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 	
+	/*
+	 * This method is used to Hover over the particular WebElement
+	 */
 	public void mouseHover(String locatorType, String locatorPath) {
 		By locator;
 		locator = locatorValue(locatorType, locatorPath);
@@ -118,6 +133,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This method waits till WebElement's presence on the DOM of a page. This does not necessarily mean that the element is visible.
+	 */
 	public void waitForElementToBeVisible(String locatorType, String locatorPath) {
 		By locator;
 		locator = locatorValue(locatorType, locatorPath);
@@ -134,6 +152,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This method waits until the visibility of WebElement on screen
+	 */
 	public void waitUntilElementIsDisplayedOnScreen(String locatorType, String locatorPath) {
 		By locator;
 		locator = locatorValue(locatorType, locatorPath);
@@ -150,6 +171,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This Method enters the provided text in arguments to the WebElement location specified
+	 */
 	public void enterText(String locatorType, String locatorPath, String value) {
 		By locator;
 		locator = locatorValue(locatorType, locatorPath);
@@ -169,6 +193,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This Method clears the text field of particular WebElement
+	 */
 	public void clearTextFied(String locatorType, String locatorPath) {
 		By locator;
 		locator = locatorValue(locatorType, locatorPath);
@@ -185,6 +212,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This Method returns the WebElement for specified locator
+	 */
 	public WebElement getElement(String locatorType, String locatorPath) {
 		By locator;
 		locator = locatorValue(locatorType, locatorPath);
@@ -197,6 +227,9 @@ public class KeyWord extends TestBase {
 		return element;
 	}
 
+	/*
+	 * This Method returns "By" locator
+	 */
 	public By getLocator(String locatorType, String locatorPath) {
 		By locator;
 		locator = locatorValue(locatorType, locatorPath);
@@ -204,6 +237,9 @@ public class KeyWord extends TestBase {
 		return locator;
 	}
 
+	/*
+	 * This Method returns the Title of Current webpage
+	 */
 	public String getPageTitle() {
 		try {
 			return driver.getTitle();
@@ -212,6 +248,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This Method returns the current of Webpage.
+	 */
 	public String getCurrentURL() {
 		try {
 			return driver.getCurrentUrl();
@@ -220,6 +259,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This method returns the enclosed Text by specified WebElement
+	 */
 	public String getElementText(String locatorType, String locatorPath) {
 		By locator = getLocator(locatorType, locatorPath);
 		waitUntilElementIsDisplayedOnScreen(locator);
@@ -232,6 +274,9 @@ public class KeyWord extends TestBase {
 		return null;
 	}
 
+	/*
+	 * This Method waits until the WebElement is displayed on screen
+	 */
 	public void waitUntilElementIsDisplayedOnScreen(By locator) {
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(StaticVals.TIMEOUT));
@@ -245,6 +290,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This method returns the count of specified WebElement
+	 */
 	public int getCount(String locatorType, String locatorPath) {
 
 		By locator = getLocator(locatorType, locatorPath);
@@ -258,6 +306,9 @@ public class KeyWord extends TestBase {
 		return count;
 	}
 
+	/*
+	 * This method will scroll to view the specified WebElement
+	 */
 	public void scrollToView(String locatorType, String locatorPath) {
 		element = getElement(locatorType, locatorPath);
 		action = new Actions(driver);
@@ -273,6 +324,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This method will scroll to the specified WebElement and then it will click on it
+	 */
 	public void scrollToViewThenClick(String locatorType, String locatorPath) {
 		element = getElement(locatorType, locatorPath);
 		action = new Actions(driver);
@@ -289,6 +343,9 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * The method returns the List of all Text Values of all the specified WebElements
+	 */
 	public List<String> getAllTextVals(String locatorType, String locatorPath) {
 		By locator;
 		locator = locatorValue(locatorType, locatorPath);
@@ -301,6 +358,9 @@ public class KeyWord extends TestBase {
 		return values;
 	}
 
+	/*
+	 * This Method switches to specified tab number.
+	 */
 	public void tabSwitch(int n) throws Exception {
 		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 		if (n >= 0 && n < tabs.size()) {
@@ -317,25 +377,10 @@ public class KeyWord extends TestBase {
 		}
 	}
 
+	/*
+	 * This Method refresh the current window
+	 */
 	public void refreshWindow() {
 		driver.navigate().refresh();
-	}
-
-	public void clickIf(String locatorType, String locatorPath) {
-		By locator;
-		locator = locatorValue(locatorType, locatorPath);
-		try {
-			List<WebElement> elements = driver.findElements(locator);
-			if (!elements.isEmpty()) {
-				element = driver.findElement(locator);
-				element.click();
-				passMessage = "Clicked Successfully";
-				report.pass(passMessage);
-			}
-		} catch (Exception e) {
-			failMessage = "Element not found";
-			report.fail(failMessage);
-			throw new TestException(failMessage);
-		}
 	}
 }

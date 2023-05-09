@@ -1,7 +1,6 @@
 package pages;
 
 import org.testng.Assert;
-
 import base.TestBase;
 import engine.KeyWord;
 import utils.AmazonObjRepo;
@@ -16,6 +15,9 @@ public class CheckoutPage extends TestBase {
 		keyWord = new KeyWord();
 	}
 
+	/*
+	 * This Method verifies the CheckoutPage
+	 */
 	public void verifyCheckoutPage() {
 		report.info("Verifying Checkout Page");
 		keyWord.waitUntilElementIsDisplayedOnScreen("xpath", AmazonObjRepo.checkOutPage_Header);
@@ -23,6 +25,9 @@ public class CheckoutPage extends TestBase {
 		keyWord.waitUntilElementIsDisplayedOnScreen("xpath", AmazonObjRepo.checkOutPage_Form);
 	}
 
+	/*
+	 * This Method fills the Delivery Address Details
+	 */
 	public void fillAddressDetails(String country, String fullName, String mobileNo, String pinCode, String houseNo,
 			String area, String city, String state) throws Exception {
 		report.info("Filling Address Details");
@@ -63,12 +68,18 @@ public class CheckoutPage extends TestBase {
 		clickUseThisAddressButton();
 	}
 
+	/*
+	 * This Method verifies the Grand Total of the Order
+	 */
 	public void verifyGrandTotalOrder() throws Exception {
 		keyWord.verifyElementExists("xpath", AmazonObjRepo.grandTotalPrice);
 		String grandTotal = keyWord.getElementText("xpath", AmazonObjRepo.grandTotalPrice);
 		report.info("Total Bill : " + grandTotal);
 	}
 
+	/*
+	 * This Method clicks on "Use This Address Button"
+	 */
 	public void clickUseThisAddressButton() throws Exception {
 		keyWord.click("xpath", AmazonObjRepo.useThisAddressButton);
 	}
