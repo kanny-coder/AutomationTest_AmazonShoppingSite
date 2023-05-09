@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-09T15:21:37 IST" name="Default suite" finished-at="2023-05-09T15:23:40 IST" duration-ms="123009">
+    <groups>
+    </groups>
+    <test started-at="2023-05-09T15:21:37 IST" name="Default test" finished-at="2023-05-09T15:23:40 IST" duration-ms="123009">
+      <class name="testScripts.Test_AmazonOrderPlacing">
+        <test-method is-config="true" signature="setUpExtentReport()[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:21:35 IST" name="setUpExtentReport" finished-at="2023-05-09T15:21:37 IST" duration-ms="1506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpExtentReport -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:21:37 IST" name="setUp" finished-at="2023-05-09T15:21:55 IST" duration-ms="17907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="signingInToAmazon()[pri:1, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:21:55 IST" name="signingInToAmazon" finished-at="2023-05-09T15:22:31 IST" duration-ms="36226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signingInToAmazon -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:22:31 IST" name="getResult" finished-at="2023-05-09T15:22:31 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=signingInToAmazon status=SUCCESS method=Test_AmazonOrderPlacing.signingInToAmazon()[pri:1, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="searchingForProduct()[pri:2, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:22:31 IST" name="searchingForProduct" finished-at="2023-05-09T15:22:41 IST" duration-ms="10144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchingForProduct -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:22:41 IST" name="getResult" finished-at="2023-05-09T15:22:41 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchingForProduct status=SUCCESS method=Test_AmazonOrderPlacing.searchingForProduct()[pri:2, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="filteringSearchResults()[pri:3, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:22:41 IST" name="filteringSearchResults" finished-at="2023-05-09T15:22:50 IST" duration-ms="8611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filteringSearchResults -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:22:50 IST" name="getResult" finished-at="2023-05-09T15:22:50 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=filteringSearchResults status=SUCCESS method=Test_AmazonOrderPlacing.filteringSearchResults()[pri:3, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="addingProductToShoppingCart()[pri:4, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:22:50 IST" name="addingProductToShoppingCart" finished-at="2023-05-09T15:23:09 IST" duration-ms="19597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addingProductToShoppingCart -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:23:09 IST" name="getResult" finished-at="2023-05-09T15:23:09 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addingProductToShoppingCart status=SUCCESS method=Test_AmazonOrderPlacing.addingProductToShoppingCart()[pri:4, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="proceedingToCheckout()[pri:5, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:23:09 IST" name="proceedingToCheckout" finished-at="2023-05-09T15:23:22 IST" duration-ms="12251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- proceedingToCheckout -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:23:22 IST" name="getResult" finished-at="2023-05-09T15:23:22 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=proceedingToCheckout status=SUCCESS method=Test_AmazonOrderPlacing.proceedingToCheckout()[pri:5, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="fillingOutCheckoutForm()[pri:6, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:23:22 IST" name="fillingOutCheckoutForm" finished-at="2023-05-09T15:23:33 IST" duration-ms="10868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillingOutCheckoutForm -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:23:33 IST" name="getResult" finished-at="2023-05-09T15:23:33 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fillingOutCheckoutForm status=SUCCESS method=Test_AmazonOrderPlacing.fillingOutCheckoutForm()[pri:6, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:23:33 IST" name="tearDown" finished-at="2023-05-09T15:23:40 IST" duration-ms="7154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:testScripts.Test_AmazonOrderPlacing@5f7eee96]" started-at="2023-05-09T15:23:40 IST" name="flushReport" finished-at="2023-05-09T15:23:42 IST" duration-ms="1768" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- testScripts.Test_AmazonOrderPlacing -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
