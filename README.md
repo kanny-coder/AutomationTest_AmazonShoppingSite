@@ -6,11 +6,9 @@ This repository contains a Java Selenium automation framework for testing the Am
 
 Before you can use this framework, make sure you have the following installed on your system:
 
-- Java Development Kit (JDK) 8 or above
+- Java Development Kit (JDK) 11 or above
 - Eclipse IDE
 - TestNG plugin for Eclipse
-- Selenium WebDriver
-- Maven
 
 ## Getting started
 
