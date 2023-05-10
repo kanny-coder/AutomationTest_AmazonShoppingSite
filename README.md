@@ -48,3 +48,10 @@ The `config.properties` file in the `src/main/java/config` directory contains th
 ## Running the tests
 
 To run the tests, simply right-click on the test class (i.e. `Test_AmazonOrderPlacing`) inside the (`src/test/java/testScripts`) you want to run in Eclipse and select "Run As" > "TestNG Test".
+
+## Generating Reports
+
+For Generation of Reports, ExtentSparkReporter a rich-HTML reporter available from the standard ExtentReports library is used. Report will get generated automatically once the Automation Test will get complete and th generated report will get stored in `testExtentReport` directory and the name of particular report will get fecthed from `config.properties` placed in the `src/main/java/config`.
+
+A Sample report Generated after running the Automation Test - `Test_AmazonOrderPlacing.java` available at `src/test/java/testScripts` is as follows :
+[Sample-Amazon Automation Test Report](Amazon_Automation_Test_Report.html)
